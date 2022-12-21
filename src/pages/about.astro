@@ -1,27 +1,61 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const identity = {
+  firstName: "Daniel",
+  country: "United States",
+  occupation: "Full Stack Developer",
+  hobbies: ["photography", "hiking", "reading"],
+};
+
+const skills = ["HTML", "CSS", "TypeScript", "React", "Astro", "RedwoodJS", "Docker"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = "green";
 ---
 
-<Layout title="Astro Blog.">
+<Layout title="About Me.">
 	<main>
 		<h1>About <span class="text-gradient">Astro Blog!</span></h1>
-		<p class="instructions">
-			This project is an experiment using <span class="text-gradient">Astro!</span>
-		</p>
+		<p>Here are a few facts about me:</p>
+		<ul>
+		<li>My name is {identity.firstName}.</li>
+		<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+		{identity.hobbies.length >= 2 && 
+			<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+		} 
+		</ul>
+		<p>My skills are:</p>
+		<ul>
+		{skills.map((skill) => <li class="skill">{skill}</li>)}
+		</ul>
+		{happy && <p>I am happy to be learning Astro!</p>}
+
+		{finished && <p>I finished this tutorial!</p>}
+
+		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 	</main>
 </Layout>
 
-<style>
+<style define:vars={{skillColor}}> 
 	main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 4rem;
 		font-weight: 800;
 		margin: 0;
+		color: purple;
 	}
+	.skill {
+		color: var(--skillColor);
+		font-weight: bold;
+ 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
