@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const identity = {
   firstName: "Daniel",
@@ -8,7 +8,15 @@ const identity = {
   hobbies: ["photography", "hiking", "reading"],
 };
 
-const skills = ["HTML", "CSS", "TypeScript", "React", "Astro", "RedwoodJS", "Docker"];
+const skills = [
+  "HTML",
+  "CSS",
+  "TypeScript",
+  "React",
+  "Astro",
+  "RedwoodJS",
+  "Docker",
+];
 
 const happy = true;
 const finished = false;
@@ -18,74 +26,87 @@ const skillColor = "green";
 ---
 
 <Layout title="About Me.">
-	<main>
-		<h1>About <span class="text-gradient">Astro Blog!</span></h1>
-		<p>Here are a few facts about me:</p>
-		<ul>
-		<li>My name is {identity.firstName}.</li>
-		<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-		{identity.hobbies.length >= 2 && 
-			<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-		} 
-		</ul>
-		<p>My skills are:</p>
-		<ul>
-		{skills.map((skill) => <li class="skill">{skill}</li>)}
-		</ul>
-		{happy && <p>I am happy to be learning Astro!</p>}
+  <main>
+    <h1>About <span class="text-gradient">Astro Blog!</span></h1>
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>
+        I live in {identity.country} and I work as a {identity.occupation}.
+      </li>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            Two of my hobbies are: {identity.hobbies[0]} and{" "}
+            {identity.hobbies[1]}
+          </li>
+        )
+      }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+    {happy && <p>I am happy to be learning Astro!</p>}
 
-		{finished && <p>I finished this tutorial!</p>}
+    {finished && <p>I finished this tutorial!</p>}
 
-		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	</main>
+    {
+      goal === 3 ? (
+        <p>My goal is to finish in 3 days.</p>
+      ) : (
+        <p>My goal is not 3 days.</p>
+      )
+    }
+  </main>
 </Layout>
 
-<style define:vars={{skillColor}}> 
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 800;
-		margin: 0;
-		color: purple;
-	}
-	.skill {
-		color: var(--skillColor);
-		font-weight: bold;
- 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+<style define:vars={{ skillColor }}>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+    color: purple;
+  }
+  .skill {
+    color: var(--skillColor);
+    font-weight: bold;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
 </style>
