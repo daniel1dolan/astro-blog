@@ -1,0 +1,59 @@
+---
+import NewCard from "../components/NewCard.astro";
+---
+
+<body>
+  <div class="bg-gray-100 flex flex-col min-h-screen h-full">
+    <header class="bg-white py-4 px-6 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800">My Blog</h1>
+        <nav class="font-bold text-gray-800">
+          <a class="px-4 hover:underline" href="#">Home</a>
+          <a class="px-4 hover:underline" href="#">About</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container mx-auto py-8 px-6 h-full">
+      <div class="grid grid-cols-3 gap-8">
+        <!-- Blog post tiles go here -->
+        <NewCard
+          src="https://source.unsplash.com/random/300x200"
+          title="Post 2"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
+          href="post1"
+          author="Rufus"
+        />
+        <NewCard
+          src="https://source.unsplash.com/random/300x200"
+          title="Post 2"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
+          href="post1"
+          author="Rufus"
+        />
+        <NewCard
+          src="https://source.unsplash.com/random/300x200"
+          title="Post 2"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
+          href="post1"
+          author="Rufus"
+        />
+        <NewCard
+          src="https://source.unsplash.com/random/300x200"
+          title="Post 2"
+          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
+          href="post1"
+          author="Rufus"
+        />
+      </div>
+    </main>
+    <footer class="bg-white py-4 px-6 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <p class="text-gray-600 text-sm">Copyright 2021 My Blog</p>
+        <nav class="font-bold text-gray-800">
+          <a class="px-4 hover:underline" href="#">Contact</a>
+          <a class="px-4 hover:underline" href="#">Privacy Policy</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+</body>

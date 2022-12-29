@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const searchParams = new URLSearchParams(Astro.request.url.split("?")[1]);
+const topic = searchParams.get("topic");
+
+console.log(topic);
+
+const generatedPost = await fetch(
+  `http://localhost:3000/generatePost?topic=${topic}`
+);
+const res = await generatedPost.json();
+// console.log(await generatedPost.json());
+---
+
+<Layout title="Astro Blog.">
+  <div class="max-w-7xl mx-auto px-4">
+    <img
+      src={res.imagejson}
+      alt="Post image"
+      class="w-1/2 h-full object-cover"
+    />
+    <h1 class="text-3xl font-bold mb-4 capitalize">{topic}</h1>
+    <div class="text-base whitespace-pre-wrap leading-7 color-#222 mb-12">
+      {res.blogText}
+    </div>
+  </div>
+</Layout>

@@ -20,7 +20,7 @@ const { title } = Astro.props;
       <div
         class="container mx-auto px-4 py-6 flex justify-between items-center"
       >
-        <h1 class="text-3xl font-bold text-gray-900">My Blog</h1>
+        <h1 class="text-3xl font-bold text-gray-900">{title}</h1>
         <nav>
           <a
             href="/"
@@ -41,9 +41,13 @@ const { title } = Astro.props;
       </div>
     </header>
     <slot />
-    <footer class="bg-white shadow-md py-6">
-      <div class="container mx-auto px-4 text-center text-gray-700">
-        &copy; My Blog 2021
+    <footer class="bg-white py-4 px-6 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <p class="text-gray-600 text-sm">Copyright 2021 My Blog</p>
+        <nav class="font-bold text-gray-800">
+          <a class="px-4 hover:underline" href="#">Contact</a>
+          <a class="px-4 hover:underline" href="#">Privacy Policy</a>
+        </nav>
       </div>
     </footer>
   </body>

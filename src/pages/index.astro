@@ -1,41 +1,38 @@
 ---
+import NewCard from "../components/NewCard.astro";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
-<Layout title="Astro Blog.">
-  <main class="container mx-auto px-4 py-6">
-    <h2 class="text-3xl font-bold text-gray-900 mb-4">Recent Posts</h2>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <Card
-        src="https://source.unsplash.com/random"
-        title="Post 1"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
-        href="post1"
-      />
-      <Card
-        src="https://source.unsplash.com/random"
+<Layout title="Astro Blog">
+  <main class="container mx-auto py-8 px-6 h-full">
+    <div class="grid grid-cols-3 gap-8">
+      <NewCard
+        src="https://source.unsplash.com/random/300x200"
         title="Post 2"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
         href="post1"
+        author="Rufus"
       />
-      <Card
-        src="https://source.unsplash.com/random"
-        title="Post 3"
+      <NewCard
+        src="https://source.unsplash.com/random/300x200"
+        title="Post 2"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
         href="post1"
+        author="Rufus"
       />
-      <Card
-        src="https://source.unsplash.com/random"
-        title="Post 4"
+      <NewCard
+        src="https://source.unsplash.com/random/300x200"
+        title="Post 2"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
         href="post1"
+        author="Rufus"
       />
-      <Card
-        src="https://source.unsplash.com/random"
-        title="Post 5"
+      <NewCard
+        src="https://source.unsplash.com/random/300x200"
+        title="Post 2"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
         href="post1"
+        author="Rufus"
       />
     </div>
   </main>
