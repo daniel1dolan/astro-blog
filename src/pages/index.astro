@@ -1,39 +1,30 @@
 ---
 import NewCard from "../components/NewCard";
 import Layout from "../layouts/Layout.astro";
+
+import type { Posts } from "../data/posts";
+
+const postsList = (await fetch("http://localhost:3000/resources/getPosts").then(
+  (res) => res.json()
+)) as { posts: Posts };
 ---
 
 <Layout title="Astro Blog">
   <main class="container mx-auto py-8 px-6 h-full">
     <div class="grid grid-cols-3 gap-8">
-      <NewCard
-        src="https://source.unsplash.com/random/300x200"
-        title="Post 2"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
-        href="post1"
-        author="Rufus"
-      />
-      <NewCard
-        src="https://source.unsplash.com/random/300x200"
-        title="Post 2"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
-        href="post1"
-        author="Rufus"
-      />
-      <NewCard
-        src="https://source.unsplash.com/random/300x200"
-        title="Post 2"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
-        href="post1"
-        author="Rufus"
-      />
-      <NewCard
-        src="https://source.unsplash.com/random/300x200"
-        title="Post 2"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut."
-        href="post1"
-        author="Rufus"
-      />
+      {
+        postsList.posts.map(({ url, title, body, slug, author }) => {
+          return (
+            <NewCard
+              src={url}
+              title={title}
+              body={body.slice(0, 120)}
+              href={`/posts/${slug}`}
+              author={author}
+            />
+          );
+        })
+      }
     </div>
   </main>
 </Layout>

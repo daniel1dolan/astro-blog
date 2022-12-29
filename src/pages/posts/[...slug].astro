@@ -1,0 +1,32 @@
+---
+import type { Posts } from "../../data/posts";
+import Layout from "../../layouts/Layout.astro";
+
+const { slug } = Astro.params;
+
+const post = (await fetch(
+  `http://localhost:3000/resources/getPost?slug=${slug}`
+).then((res) => {
+  if (res.status !== 200) {
+    return null;
+  }
+  return res.json();
+})) as Posts[number];
+
+if (!post) return Astro.redirect("/404");
+
+const { author, body, title, url } = post;
+---
+
+<Layout title="Astro Blog">
+  <main class="container mx-auto py-8 px-6">
+    <img class="w-full rounded-lg shadow-md" src={url} alt="Article image" />
+    <div class="mt-8">
+      <h1 class="text-4xl font-bold text-gray-800">{title}</h1>
+      <p class="text-gray-600 text-sm mt-2">Written by {author}</p>
+      <p class="text-gray-700 mt-4">
+        {body}
+      </p>
+    </div>
+  </main>
+</Layout>
