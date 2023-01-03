@@ -7,7 +7,7 @@ const topic = searchParams.get("topic");
 console.log(topic);
 
 const generatedPost = await fetch(
-  `http://localhost:3000/generatePost?topic=${topic}`
+  `${import.meta.env.API_URL}/generatePost?topic=${topic}`
 );
 const res = await generatedPost.json();
 // console.log(await generatedPost.json());
