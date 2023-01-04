@@ -12,7 +12,6 @@ export const posts = [
       "Yoga also has many mental and emotional benefits. It can help to reduce anxiety, depression, and stress. It can also help to increase body awareness and self-acceptance. It can also help to reduce insomnia and improve overall mood.\n" +
       "\n" +
       "Yoga is an excellent form of exercise and relaxation. It can help to promote physical, mental, and emotional wellbeing. If you are looking for a way to improve your physical and mental health, then yoga is definitely worth looking into.",
-    url: "https://oaidalleapiprodscus.blob.core.windows.net/private/org-3pElLsPxJxSTs7sMwAcUvrFV/user-p4TIPqgRmABsbZNlQ6a17KEH/img-ErDlh9V5kS9ihY72kjWhDuZ0.png?st=2022-12-29T03%3A31%3A54Z&se=2022-12-29T05%3A31%3A54Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-29T00%3A27%3A07Z&ske=2022-12-30T00%3A27%3A07Z&sks=b&skv=2021-08-06&sig=vEqq%2BScU32SrfhIP0xcVqSOg4oMtfavQ7wurLUsCrjk%3D",
     title: "Yoga",
     author: "Rufus",
     slug: "yoga",
@@ -30,7 +29,6 @@ export const posts = [
       "When it comes to care, corgis are fairly low-maintenance. They require regular brushing to keep their coats healthy and tangle-free, as well as regular exercise and mental stimulation. Corgis can live up to 15 years with proper care, so they make a great long-term commitment.\n" +
       "\n" +
       "If you’re looking for a fun-loving, loyal companion, look no further than the corgi. These loyal pups will fill your home with laughter and love, and will be your faithful companion for years to come.",
-    url: "https://oaidalleapiprodscus.blob.core.windows.net/private/org-3pElLsPxJxSTs7sMwAcUvrFV/user-p4TIPqgRmABsbZNlQ6a17KEH/img-lKKROcQ7kpwMwwGvSpMTufJz.png?st=2022-12-29T03%3A34%3A23Z&se=2022-12-29T05%3A34%3A23Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-29T02%3A53%3A02Z&ske=2022-12-30T02%3A53%3A02Z&sks=b&skv=2021-08-06&sig=tPSbiWMmybhKuQAKJtiIXYQIXZ2PDoCPxRc%2B4ZR1qFw%3D",
     title: "Corgis",
     author: "Marlo",
     slug: "corgis",
@@ -48,7 +46,6 @@ export const posts = [
       "Bengals are known for being quite active cats and they require a lot of daily exercise. They love to play with a variety of toys, such as balls and feather wands, and they also enjoy exploring the outdoors. It is important to provide your Bengal with plenty of enrichment activities, such as puzzle feeders, to keep them entertained.\n" +
       "\n" +
       "Overall, Bengals are wonderful cats that make great family pets. They are loving and affectionate, and they can provide their owners with lots of entertainment and joy. If you are looking for a unique and active cat, consider getting a Bengal!",
-    url: "https://oaidalleapiprodscus.blob.core.windows.net/private/org-3pElLsPxJxSTs7sMwAcUvrFV/user-p4TIPqgRmABsbZNlQ6a17KEH/img-PxGEgXhb6N9j1nnp4fHl8hKW.png?st=2022-12-29T03%3A37%3A35Z&se=2022-12-29T05%3A37%3A35Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-28T22%3A44%3A04Z&ske=2022-12-29T22%3A44%3A04Z&sks=b&skv=2021-08-06&sig=sTk62cyu4PeyvHrnATJxUHj3Ix2YygvjUKvHO3agzNY%3D",
     title: "Bengals",
     author: "Yadi",
     slug: "bengals",
@@ -66,7 +63,6 @@ export const posts = [
       "Doge isn’t just a meme, it’s a way of life. It has become a symbol of fun and positivity, which is why so many people have embraced it. Doge is a great reminder to take things less seriously and enjoy life. It’s a reminder that life is too short to worry about the small stuff.\n" +
       "\n" +
       "So, if you’re looking for a way to spread some positivity and have a little fun, why not consider embracing Doge? It’s sure to put a smile on your face and give you a much-needed break from the stresses of everyday life.",
-    url: "https://oaidalleapiprodscus.blob.core.windows.net/private/org-3pElLsPxJxSTs7sMwAcUvrFV/user-p4TIPqgRmABsbZNlQ6a17KEH/img-HjCMv9JQG1GQGybaJlWTxpkI.png?st=2022-12-31T22%3A53%3A06Z&se=2023-01-01T00%3A53%3A06Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2022-12-31T20%3A25%3A24Z&ske=2023-01-01T20%3A25%3A24Z&sks=b&skv=2021-08-06&sig=9KLqCgWiiHGvCHpo70DjTPg4O433eRIqPpnohxEui88%3D",
     title: "Doge",
     author: "Angus",
     slug: "doge",

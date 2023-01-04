@@ -13,10 +13,10 @@ const postsList = (await fetch(
   <main class="container mx-auto py-8 px-6 h-full">
     <div class="grid grid-cols-3 gap-8">
       {
-        postsList.posts.map(({ url, title, body, slug, author }) => {
+        postsList.posts.map(({ title, body, slug, author }) => {
           return (
             <NewCard
-              src={url}
+              src={`/images/${slug}.jpeg`}
               title={title}
               body={body.slice(0, 120)}
               href={`/posts/${slug}`}

@@ -15,7 +15,7 @@ const post = (await fetch(
 
 if (!post) return Astro.redirect("/404");
 
-const { author, body, title, url } = post;
+const { author, body, title } = post;
 ---
 
 <Layout title="Astro Blog">
@@ -26,7 +26,11 @@ const { author, body, title, url } = post;
         href="/">Back to Blog List</a
       >
     </div>
-    <img class="w-full rounded-lg shadow-md" src={url} alt="Article image" />
+    <img
+      class="w-full rounded-lg shadow-md"
+      src={`/images/${slug}.jpeg`}
+      alt="Article image"
+    />
     <div class="mt-8">
       <h1 class="text-4xl font-bold text-gray-800">{title}</h1>
       <p class="text-gray-600 text-sm mt-2">Written by {author}</p>
