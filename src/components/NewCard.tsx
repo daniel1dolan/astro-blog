@@ -1,11 +1,11 @@
-import React from "react";
+import type React from "react";
 
 export interface Props {
   title: string;
   author: string;
   body: string;
   href: string;
-  src: string;
+  children: React.ReactNode;
 }
 
 const lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lacus eu
@@ -13,15 +13,11 @@ const lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eg
       accumsan, in laoreet velit vehicula.`;
 
 const NewCard = (props: Props) => {
-  const { href, title, author, body = lorem, src } = props;
+  const { href, title, author, body = lorem, children } = props;
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
-      <img
-        className="w-full rounded-lg shadow-md"
-        src={src}
-        alt="Article image"
-      />
+      {children}
       <div className="mt-4">
         <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
         <p className="text-gray-600 text-sm mt-2">Written by {author}</p>

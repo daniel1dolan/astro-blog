@@ -1,4 +1,6 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import type { Posts } from "../../data/posts";
 import Layout from "../../layouts/Layout.astro";
 
@@ -26,10 +28,12 @@ const { author, body, title } = post;
         href="/">Back to Blog List</a
       >
     </div>
-    <img
+    <Image
       class="w-full rounded-lg shadow-md"
       src={`/images/${slug}.jpeg`}
       alt="Article image"
+      width="700"
+      aspectRatio="16:9"
     />
     <div class="mt-8">
       <h1 class="text-4xl font-bold text-gray-800">{title}</h1>
