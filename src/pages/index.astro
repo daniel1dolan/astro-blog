@@ -6,8 +6,10 @@ import Layout from "../layouts/Layout.astro";
 
 import type { Posts } from "../data/posts";
 
+console.log();
+
 const postsList = (await fetch(
-  `${import.meta.env.API_URL}/resources/getPosts`
+  `${import.meta.env.PUBLIC_API_URL}/resources/getPosts`
 ).then((res) => res.json())) as { posts: Posts };
 ---
 

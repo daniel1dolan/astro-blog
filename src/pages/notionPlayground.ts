@@ -33,6 +33,30 @@ export const get: APIRoute = async ({ request }: { request: Request }) => {
     }
   }
 
+  async function getPosts(status: string) {
+    try {
+      const res = await notion.databases.query({
+        database_id: databaseId,
+      });
+
+      res.results.map((el) => {
+        if (el.object === "page") {
+          console.log(el.properties.Name.title[0]?.text.content);
+        }
+      });
+      // console.log(res.results[0].properties.Name.title[0].text.content);
+      //  notion.databases.retrieve({
+      //   database_id: databaseId,
+      // });
+      console.log(res);
+      console.log("Success! Database retrieved.");
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  await getPosts("Published");
+
   //   async function deleteItem(item) {
   //     try {
   //         const response = await notion.
@@ -54,7 +78,7 @@ export const get: APIRoute = async ({ request }: { request: Request }) => {
   return new Response(JSON.stringify({ hello: "notion" }), {
     status: 200,
     headers: {
-      "Content-Type": "application/jsonz",
+      "Content-Type": "application/json",
     },
   });
 };

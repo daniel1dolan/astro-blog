@@ -7,7 +7,7 @@ import Layout from "../../layouts/Layout.astro";
 const { slug } = Astro.params;
 
 const post = (await fetch(
-  `${import.meta.env.API_URL}/resources/getPost?slug=${slug}`
+  `${import.meta.env.PUBLIC_API_URL}/resources/getPost?slug=${slug}`
 ).then((res) => {
   if (res.status !== 200) {
     return null;

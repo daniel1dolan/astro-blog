@@ -10,6 +10,8 @@ export async function get() {
     });
   }
 
+  console.log("server posts");
+
   return new Response(JSON.stringify({ posts: postList }), {
     status: 200,
     headers: {

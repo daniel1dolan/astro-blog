@@ -1,0 +1,10 @@
+---
+import { CreatePost } from "../../components/CreatePost";
+import Layout from "../../layouts/Layout.astro";
+
+console.log(import.meta.env.API_URL);
+---
+
+<Layout title="Create Post">
+  <CreatePost client:load />
+</Layout>
