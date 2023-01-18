@@ -17,7 +17,7 @@ const postsList = (await fetch(
   <main class="container mx-auto py-8 px-6 h-full">
     <div class="grid grid-cols-3 gap-8">
       {
-        postsList.posts.map(({ title, body, slug, author }) => {
+        postsList.posts.map(({ title, body, slug, author, imageUrl }) => {
           return (
             <NewCard
               title={title}
@@ -26,7 +26,7 @@ const postsList = (await fetch(
               author={author}
             >
               <Image
-                src={`/images/${slug}.jpeg`}
+                src={imageUrl}
                 alt="Article image"
                 className="w-full rounded-lg shadow-md"
                 width="350"

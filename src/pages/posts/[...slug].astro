@@ -17,7 +17,7 @@ const post = (await fetch(
 
 if (!post) return Astro.redirect("/404");
 
-const { author, body, title } = post;
+const { author, body, title, imageUrl } = post;
 ---
 
 <Layout title="Astro Blog">
@@ -30,7 +30,7 @@ const { author, body, title } = post;
     </div>
     <Image
       class="w-full rounded-lg shadow-md"
-      src={`/images/${slug}.jpeg`}
+      src={imageUrl}
       alt="Article image"
       width="700"
       aspectRatio="16:9"

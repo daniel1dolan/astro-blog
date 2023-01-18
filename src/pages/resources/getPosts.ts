@@ -1,9 +1,9 @@
-import { posts } from "../../data/posts";
+import { getPosts } from "../../util/notion";
 
 export async function get() {
-  const postList = posts;
+  const postList = await getPosts();
 
-  if (postList.length < 0) {
+  if (!postList || postList.length < 0) {
     return new Response(null, {
       status: 404,
       statusText: "No posts found.",
@@ -11,6 +11,8 @@ export async function get() {
   }
 
   console.log("server posts");
+
+  console.log(postList);
 
   return new Response(JSON.stringify({ posts: postList }), {
     status: 200,

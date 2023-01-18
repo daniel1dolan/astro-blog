@@ -55,14 +55,6 @@ export const get: APIRoute = async ({ request }: { request: Request }) => {
     res = { error: "No resource requested." };
   }
 
-  // fetch(imagejson as string)
-  //   .then((response) => {
-  //     return response.arrayBuffer();
-  //   })
-  //   .then((buffer) => {
-  //     fs.writeFileSync("image.jpeg", Buffer.from(buffer));
-  //   });
-
   // console.log(resImage.data.data[0].url);
 
   console.log("this is on the server");
@@ -70,7 +62,7 @@ export const get: APIRoute = async ({ request }: { request: Request }) => {
   return new Response(JSON.stringify(res), {
     status: 200,
     headers: {
-      "Content-Type": "application/jsonz",
+      "Content-Type": "application/json",
     },
   });
 };
