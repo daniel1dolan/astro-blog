@@ -107,6 +107,14 @@
     uvu "^0.5.0"
     vfile-message "^3.0.0"
 
+"@astrojs/partytown@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-1.0.2.tgz#e31f44e366b070815c68c7ede9fe567b8c75316c"
+  integrity sha512-+pUjLxdp0SYqUO+X+FjFN95KxK7w4Rs5gIMQ7scKUWd2073D3/5hTlij9qNmX5Bk/tFHUfTivKIZ5p233Lpa9Q==
+  dependencies:
+    "@builder.io/partytown" "^0.7.1"
+    mrmime "^1.0.0"
+
 "@astrojs/prism@^1.0.0":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-1.0.2.tgz#f01cad9007a46dc006d129d99653bd1652657ecf"
@@ -502,6 +510,11 @@
     "@babel/helper-string-parser" "^7.19.4"
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
+
+"@builder.io/partytown@^0.7.1":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.4.tgz#7ac078bf288efc041ecec025679a58ca78ab4ab9"
+  integrity sha512-dcZBPNQiHbMhvDGmdWRFNe75Z/XYmeZ2bubYmC5BeQpF09ObbPcbSqIP2NaNOFonKlWLfsE6u1790o9ZmlfpIw==
 
 "@emmetio/abbreviation@^2.2.3":
   version "2.2.3"
@@ -904,6 +917,11 @@
   dependencies:
     "@typescript-eslint/types" "5.47.0"
     eslint-visitor-keys "^3.3.0"
+
+"@vercel/analytics@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-0.1.8.tgz#71f1f8c7bb98ac0c5c47eb3fb8ccbe8141b9fe47"
+  integrity sha512-PQrOI8BJ9qUiVJuQfnKiJd15eDjDJH9TBKsNeMrtelT4NAk7d9mBVz1CoZkvoFnHQ0OW7Xnqmr1F2nScfAnznQ==
 
 "@vercel/nft@^0.22.1":
   version "0.22.5"
