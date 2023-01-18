@@ -1,4 +1,6 @@
 import type { APIRoute } from "astro";
+import type { Posts } from "../../data/posts";
+import cache from "../../util/cache";
 import { getPost } from "../../util/notion";
 
 export const get: APIRoute = async ({ request }) => {
@@ -13,7 +15,9 @@ export const get: APIRoute = async ({ request }) => {
     });
   }
 
-  const post = await getPost(slug);
+  const post = await cache<Posts[number] | undefined>(`v1-post-${slug}`, () =>
+    getPost(slug)
+  );
 
   if (!post) {
     return new Response(null, {
