@@ -3,7 +3,7 @@ import { saveImage } from "../util/saveImage";
 import { addItem } from "../util/notion";
 
 export const post: APIRoute = async ({ request }: { request: Request }) => {
-  if (import.meta.env.AWS_REGION) {
+  if (import.meta.env.VERCEL) {
     return new Response(null, {
       status: 401,
       statusText: "Not authorized.",

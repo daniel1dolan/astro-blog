@@ -2,7 +2,7 @@ import type { APIRoute } from "astro";
 import { clearCache } from "../../../util/cache";
 
 export const get: APIRoute = async ({ params, request }) => {
-  if (import.meta.env.AWS_REGION) {
+  if (import.meta.env.VERCEL) {
     return new Response(null, {
       status: 401,
       statusText: "Not authorized.",
