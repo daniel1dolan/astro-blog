@@ -57,10 +57,18 @@ export async function clearEntireCache() {
   return res;
 }
 
-export async function clearCache(key: string) {
+export async function clearCache(...args: Array<string>) {
   const cacheClient = getCacheClient();
 
-  const res = await cacheClient.del(key);
+  const res = await cacheClient.del(...args);
+
+  return res;
+}
+
+export async function getCacheValueByKey<TData>(key: string) {
+  const cacheClient = getCacheClient();
+
+  const res = await cacheClient.get<TData>(key);
 
   return res;
 }
