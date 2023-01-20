@@ -18,7 +18,7 @@ function compareArrays<T>(arr1: Array<T>, arr2: Array<T>): Array<T> {
     );
 }
 
-export const get: APIRoute = async ({ request }) => {
+export const post: APIRoute = async ({ request }) => {
   // Validate request
   const isValidRequest = await requestValidator(request);
 
